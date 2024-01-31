@@ -11,7 +11,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.zerock.api01.util.JWTUtil;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.Map;
 

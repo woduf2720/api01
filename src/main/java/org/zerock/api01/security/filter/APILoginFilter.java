@@ -27,10 +27,12 @@ public class APILoginFilter extends AbstractAuthenticationProcessingFilter {
 
         log.info("APILoginFilter------------------------------");
 
+
         if(request.getMethod().equalsIgnoreCase("GET")){
             log.info("GET METHOD NOT SUPPORT");
             return null;
         }
+
         Map<String, String> jsonData = parseRequestJSON(request);
         log.info(jsonData);
 

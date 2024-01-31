@@ -5,10 +5,8 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
-import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.core.context.SecurityContext;
 
 @Configuration
 public class SwaggerConfig {
@@ -27,15 +25,16 @@ public class SwaggerConfig {
     }
 
     private SecurityRequirement securityRequirement() {
-        return new SecurityRequirement().addList("JWT");
+        return new SecurityRequirement().addList("Authorization");
     }
 
     private Components components() {
         return new Components().addSecuritySchemes("Authorization", new SecurityScheme()
-                .name("JWT")
-                .type(SecurityScheme.Type.APIKEY)
+                .name("Authorization")
+                .type(SecurityScheme.Type.HTTP)
                 .scheme("bearer")
-                .bearerFormat("JWT")
         );
     }
+
+
 }

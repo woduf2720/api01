@@ -25,7 +25,7 @@ public class JWTUtilTests {
 
     @Test
     public void testValidate() {
-        String jwtStr = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtaWQiOiJBQkNERSIsImlhdCI6MTcwNjUzMjc5NCwiZXhwIjoxNzA2NTMyODU0fQ.6pTJB2XgtcLLBQ3--Rncy8Sd226_Lz-q3UNSAWnsUVUaa";
+        String jwtStr = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtaWQiOiJhcGl1c2VyMTAiLCJpYXQiOjE3MDY1OTQwNjksImV4cCI6MTcwNjY4MDQ2OX0.HqT_wNQKf-kRwFU617duzGWtROigK7iyWO6b7nGLbm0";
 
         Map<String, Object> claim = jwtUtil.validateToken(jwtStr);
         log.info(claim);
